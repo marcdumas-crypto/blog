@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S.A.D Personal Blog</title>
+<style>
+:root{--bg:#0d0f14;--card:#1a1d26;--line:#2a2e3a;--text:#e8eaf0;--muted:#8d95aa;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",system-ui,-apple-system,Arial,sans-serif;line-height:1.6;padding:32px 16px 64px}
+.card{max-width:680px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px}
+header{border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:32px}
+header h1{margin:0 0 8px;font-size:2rem;line-height:1.2;letter-spacing:-.02em}
+header p{margin:0;color:var(--muted);font-size:.95rem}
+article h2{margin:0 0 6px;font-size:1.4rem;line-height:1.3}
+.date{color:var(--muted);font-size:.85rem;margin:0 0 20px}
+article h3{margin:32px 0 12px;font-size:1.15rem;line-height:1.35}
+article p,article li{font-size:1rem;color:var(--text)}
+article p{margin:0 0 16px}
+article ul,article ol{margin:0 0 16px;padding-left:22px}
+article li{margin-bottom:8px}
+.refs p{padding-left:32px;text-indent:-32px;overflow-wrap:anywhere}
+a{color:#8ab4ff}
+:focus-visible{outline:2px solid #8ab4ff;outline-offset:2px}
+@media(max-width:520px){.card{padding:22px}header h1{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<main class="card">
+<header>
+<h1>S.A.D Personal Blog</h1>
+<p>IT33 Ridley Rae A. Poloyapoy Blog for IT 372</p>
+</header>
+
+<article>
+<h2>Through the Auditor’s Eyes: What Our Risk Assessment Form Would Reveal</h2>
+<p class="date">October 20, 2026</p>
+
+<p>When our group completed our Risk Assessment Form, we felt fairly confident. We had listed assets, rated threats, scored likelihood and impact, and recommended treatments. Then I tried rereading the form as an auditor would, and the question changed. It was no longer “Did we identify the risks?” It became “Could this organization prove that it knows what it owns, who is responsible for it, and that its controls actually work?”</p>
+<p>That shift is humbling. A risk assessment tells a story about what matters and what could go wrong. An audit asks for evidence that the story is true. To respect the organization’s confidentiality, I’ll discuss our findings in general terms, without naming individuals or describing specific weaknesses.</p>
+
+<h3>You Can’t Protect What You Can’t Name</h3>
+<p>Every risk assessment starts with assets, and an auditor starts there too. ISO/IEC 27001:2022 expects an organization to identify information and other associated assets and maintain an inventory of them (International Organization for Standardization [ISO] &amp; International Electrotechnical Commission [IEC], 2022). NIST makes the same point: a risk assessment is only as reliable as the picture of assets, threats, and vulnerabilities feeding it (Joint Task Force Transformation Initiative, 2012).</p>
+<p>In our assessment, the assets that mattered most fell into a few broad groups:</p>
+<ul>
+<li><strong>Information assets</strong>, such as customer or client records, financial data, and operational documents.</li>
+<li><strong>Systems and infrastructure</strong>, including servers, network equipment, and the applications the business runs on.</li>
+<li><strong>Supporting assets</strong>, such as end-user devices, cloud accounts, and backup media.</li>
+<li><strong>People and process assets</strong>, meaning the knowledge, roles, and procedures that keep operations running.</li>
+</ul>
+<p>The assets that mattered most were those whose loss or exposure would interrupt core operations or harm the people the organization serves. These were not always the most expensive items. A modest database holding sensitive records can carry far more risk than a costly piece of hardware that could be replaced next week.</p>
+<p>An auditor would notice something we only partly addressed: our asset list was a snapshot, not a living inventory. It captured what we saw during the assessment. It did not show how new assets get added, how retired ones are removed, or who confirms the list is still accurate. NIST’s control catalog treats this as a continuing duty, with system component inventories that are documented, kept current, and reviewed (Joint Task Force, 2020). A one-time list satisfies a school assignment. An audit would want a process.</p>
+
+<h3>Classification: Deciding How Much Each Asset Matters</h3>
+<p>Once assets are named, the next audit question is how they are classified. Classification translates business value into handling rules. ISO/IEC 27001:2022 expects information to be classified according to confidentiality, integrity, availability, and relevant stakeholder requirements, and then labeled and handled accordingly (ISO &amp; IEC, 2022).</p>
+<p>A simple, defensible scheme works best. A four-tier model is common:</p>
+<ol>
+<li><strong>Public:</strong> information that can be shared freely.</li>
+<li><strong>Internal:</strong> information for staff only, where exposure would be an inconvenience.</li>
+<li><strong>Confidential:</strong> information whose exposure could harm the organization or the people it serves.</li>
+<li><strong>Restricted:</strong> the highest-value assets, where exposure, alteration, or loss would cause serious harm.</li>
+</ol>
+<p>Applying this to our assessment, the assets that mattered most clustered in the upper tiers. Records tied to individuals and financial information were confidential at minimum. Systems that, if unavailable, would stop the organization from functioning deserved a high rating for availability even if they held little sensitive data. This is why classification should not only ask “Is it secret?” It should also ask “How badly would we be hurt if this were changed or unavailable?”</p>
+<p>An auditor would likely find that classification in our form was implied rather than explicit. We ranked risks, but we did not assign each asset a formal classification label tied to specific handling requirements. That gap matters, because without labels there is no consistent basis for deciding who gets access, how data is stored, or how it is disposed of.</p>
+
+<h3>Ownership: Who Answers for Each Asset?</h3>
+<p>If I had to pick the most common audit finding in information security, it would be unclear ownership. An asset with no owner is an asset nobody is accountable for, and ISO/IEC 27001:2022 expects every inventoried asset to have one (ISO &amp; IEC, 2022).</p>
+<p>The distinction between owner and custodian is useful here. The <strong>owner</strong> is accountable for the asset. They decide its classification, approve access, and make sure it is protected appropriately. The <strong>custodian</strong>, often IT or a service provider, carries out the technical protections. Confusion between the two creates the classic failure in which everyone assumes someone else is handling it.</p>
+<p>In our assessment, responsibility was described mostly at the department or team level. An auditor would push for a named role, not a vague group. To keep individuals anonymous, the right answer is to assign ownership to <em>roles</em> (for example, the head of a business function) rather than to people. Roles survive staff turnover, and they keep records both accountable and confidential.</p>
+
+<h3>What Evidence Would an Auditor Ask For?</h3>
+<p>This is where the exercise became uncomfortable. An auditor doesn’t take claims at face value. They request artifacts. For the controls we recommended, I’d expect requests such as:</p>
+<ul>
+<li><strong>A current asset inventory</strong> with owners, classifications, and review dates.</li>
+<li><strong>Policies and procedures</strong> that are approved, dated, and communicated to staff.</li>
+<li><strong>Access records</strong>, including who was granted access, who approved it, and periodic reviews of that access.</li>
+<li><strong>Logs and monitoring outputs</strong> showing controls operating over time, not only configured once.</li>
+<li><strong>Backup and recovery test results</strong> proving that restoration actually works.</li>
+<li><strong>Training and awareness records</strong> showing staff were informed of their responsibilities.</li>
+<li><strong>Change and incident records</strong> demonstrating the organization responds to problems in a consistent way.</li>
+</ul>
+<p>NIST’s assessment guidance reflects this evidence-based approach: assessing a control means examining documentation, interviewing personnel, and testing the control in operation, not merely confirming it exists on paper (Joint Task Force, 2022). The principle is simple. A control that cannot be demonstrated is, for audit purposes, a control that may not exist.</p>
+
+<h3>The Gaps an Auditor Would Likely Uncover</h3>
+<p>Reading our form critically, I’d expect an auditor to raise gaps in several general areas:</p>
+<p><strong>Inventory completeness.</strong> Assets like personal devices, cloud services adopted informally, and old media tend to escape lists. These are often where risk quietly accumulates.</p>
+<p><strong>Classification without enforcement.</strong> Even where sensitivity was understood, there was no documented link between a label and a required handling rule.</p>
+<p><strong>Ownership at role level.</strong> Responsibility existed informally, but it wasn’t recorded in a way an auditor could verify.</p>
+<p><strong>Controls without proof of operation.</strong> Our recommended treatments described what should be done, but not how the organization would show they were working. A recommendation to “review access regularly,” for instance, means little without a schedule, a responsible role, and a record of each review.</p>
+<p><strong>Review cadence.</strong> Risk assessments go stale. An auditor would ask when ours was last updated and what triggers a new one.</p>
+
+<h3>Closing Reflection: How an Inventory and Checklist Strengthen Our Treatments</h3>
+<p>Looking back, the biggest lesson is that our treatments were sound but incomplete. We recommended sensible controls, yet a control only reduces risk when it is applied to the right asset, owned by the right role, and verified over time. An asset inventory and an audit checklist are what connect those pieces.</p>
+<p>A well-maintained <strong>asset inventory</strong> anchors every treatment. It tells us which assets each control protects, who is accountable for each, and what classification determines how strong the protection must be. It also exposes unprotected assets before an attacker or auditor does.</p>
+<p>An <strong>audit checklist</strong> turns each recommendation into something testable. For every treatment, it asks: What is the control? Who owns it? What evidence proves it works? When was it last verified? This closes the loop between <em>recommending</em> a treatment and <em>demonstrating</em> it. If our group were to revise the Risk Assessment Form, I would add columns for asset owner, classification, and evidence of control operation, so the form works as both a risk register and an audit-readiness tool.</p>
+<p>Revisiting our work as an auditor changed how I think about security. A risk assessment isn’t finished when the form is complete. It’s finished when the organization can show, with evidence, that it knows what it owns, who is responsible, and that its protections work.</p>
+
+<h3>References</h3>
+<div class="refs">
+<p>International Organization for Standardization &amp; International Electrotechnical Commission. (2022). <em>Information security, cybersecurity and privacy protection — Information security management systems — Requirements</em> (ISO/IEC Standard No. 27001:2022).</p>
+<p>Joint Task Force. (2020). <em>Security and privacy controls for information systems and organizations</em> (NIST Special Publication 800-53, Rev. 5). National Institute of Standards and Technology. <a href="https://doi.org/10.6028/NIST.SP.800-53r5">https://doi.org/10.6028/NIST.SP.800-53r5</a></p>
+<p>Joint Task Force. (2022). <em>Assessing security and privacy controls in information systems and organizations</em> (NIST Special Publication 800-53A, Rev. 5). National Institute of Standards and Technology. <a href="https://doi.org/10.6028/NIST.SP.800-53Ar5">https://doi.org/10.6028/NIST.SP.800-53Ar5</a></p>
+<p>Joint Task Force Transformation Initiative. (2012). <em>Guide for conducting risk assessments</em> (NIST Special Publication 800-30, Rev. 1). National Institute of Standards and Technology. <a href="https://doi.org/10.6028/NIST.SP.800-30r1">https://doi.org/10.6028/NIST.SP.800-30r1</a></p>
+</div>
+</article>
+</main>
+</body>
+</html>
